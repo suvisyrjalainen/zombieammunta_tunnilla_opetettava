@@ -10,11 +10,15 @@ public class ammu : MonoBehaviour
     public GameObject throwObjPrefab;
     private GameObject ammus = null;
 
+    public LineRenderer lr;
+
 
     // Start is called before the first frame update
     void Start()
     {
         FPSCamera = Camera.main;
+
+        lr.enabled = false;
     }
 
     // Update is called once per frame
@@ -27,7 +31,8 @@ public class ammu : MonoBehaviour
         }
         if (Input.GetButtonDown("Fire2"))
         {
-            Laser();
+            //Laser();
+            StartCoroutine(Laser());
         }
     }
 
@@ -38,13 +43,19 @@ public class ammu : MonoBehaviour
         ammus.GetComponent<Rigidbody>().AddForce(FPSCamera.transform.forward * throwForce, ForceMode.Impulse);
     }
 
-    public void Laser()
+    public IEnumerator Laser()
     {
         RaycastHit hit;
         if (Physics.Raycast(transform.position, transform.forward, out hit))
         {
             Debug.Log(hit.collider.gameObject.name);
+            lr.SetPosition(0, transform.position);
+            lr.SetPosition(1, hit.point);
         }
+
+        lr.enabled = true;
+        yield return new WaitForSecondsRealtime(2.6f);
+        lr.enabled = false;
 
     }
 }
