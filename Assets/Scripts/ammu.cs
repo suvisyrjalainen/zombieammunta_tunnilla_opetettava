@@ -12,24 +12,29 @@ public class ammu : MonoBehaviour
 
     public LineRenderer lr;
 
+    public Animator anim;
+
 
     // Start is called before the first frame update
     void Start()
     {
         FPSCamera = Camera.main;
 
-        lr.enabled = false;
+        if (gameObject.CompareTag("LaserAse"))
+        {
+            lr.enabled = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButtonDown("Fire1") && gameObject.CompareTag("Ase"))
         {
             Throw();
 
         }
-        if (Input.GetButtonDown("Fire2"))
+        if (Input.GetButtonDown("Fire2") && gameObject.CompareTag("LaserAse"))
         {
             //Laser();
             StartCoroutine(Laser());
@@ -51,6 +56,11 @@ public class ammu : MonoBehaviour
             Debug.Log(hit.collider.gameObject.name);
             lr.SetPosition(0, transform.position);
             lr.SetPosition(1, hit.point);
+
+            if (hit.collider.gameObject.name == "Zombie1")
+            {
+                anim.SetBool("Ammuttu", true);
+            }
         }
 
         lr.enabled = true;
