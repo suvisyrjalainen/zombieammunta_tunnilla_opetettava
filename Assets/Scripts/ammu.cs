@@ -27,6 +27,7 @@ public class ammu : MonoBehaviour
     }
 
     // Update is called once per frame
+    //moikka
     void Update()
     {
         if (Input.GetButtonDown("Fire1") && gameObject.CompareTag("Ase"))
