@@ -57,5 +57,10 @@ public class zombie : MonoBehaviour
         }
     }
 
+    public void stop_zombie()
+    {
+        eteenpain_nopeus = 0f;
+    }
+
 
 }

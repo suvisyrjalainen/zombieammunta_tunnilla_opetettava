@@ -14,6 +14,8 @@ public class ammu : MonoBehaviour
 
     public Animator anim;
 
+    public GameObject Zombie;
+
 
     // Start is called before the first frame update
     void Start()
@@ -61,7 +63,16 @@ public class ammu : MonoBehaviour
             if (hit.collider.gameObject.name == "Zombie1")
             {
                 anim.SetBool("Ammuttu", true);
+                hit.collider.gameObject.GetComponent<zombie>().stop_zombie();
+                
             }
+
+            Rigidbody rb = hit.collider.gameObject.GetComponent<Rigidbody>();
+            if (rb != null)
+            {
+                rb.AddForce(FPSCamera.transform.forward * 100, ForceMode.Impulse);
+            }
+
         }
 
         lr.enabled = true;

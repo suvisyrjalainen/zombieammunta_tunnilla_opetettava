@@ -620,7 +620,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 800707ab4839f3b4b9330654a88adafa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  eteenpain_nopeus: 1
   wallMask:
     serializedVersion: 2
     m_Bits: 0
@@ -834,9 +833,10 @@ GameObject:
   - component: {fileID: 846781338}
   - component: {fileID: 846781337}
   - component: {fileID: 846781336}
+  - component: {fileID: 846781340}
   m_Layer: 9
   m_Name: Seina6
-  m_TagString: seina
+  m_TagString: kaadettava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -917,6 +917,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!54 &846781340
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846781335}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,7 +1239,7 @@ GameObject:
   - component: {fileID: 1155238268}
   m_Layer: 9
   m_Name: Seina6 (1)
-  m_TagString: seina
+  m_TagString: kaadettava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1814,9 +1830,10 @@ GameObject:
   - component: {fileID: 1630725692}
   - component: {fileID: 1630725691}
   - component: {fileID: 1630725690}
+  - component: {fileID: 1630725694}
   m_Layer: 9
   m_Name: Seina1 (7)
-  m_TagString: seina
+  m_TagString: kaadettava
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1897,6 +1914,22 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1630725694
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1630725689}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1698248090
 GameObject:
   m_ObjectHideFlags: 0
