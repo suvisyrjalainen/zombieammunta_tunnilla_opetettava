@@ -63,8 +63,8 @@ public class ammu : MonoBehaviour
             if (hit.collider.gameObject.name == "Zombie1")
             {
                 anim.SetBool("Ammuttu", true);
-                hit.collider.gameObject.GetComponent<zombie>().stop_zombie();
-                
+                //hit.collider.gameObject.GetComponent<zombie>().stop_zombie_1();
+                hit.collider.gameObject.GetComponent<zombie>().eteenpain_nopeus = 0;
             }
 
             Rigidbody rb = hit.collider.gameObject.GetComponent<Rigidbody>();
